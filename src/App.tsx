@@ -1,28 +1,46 @@
-import { useState } from 'react'
-import './assets/css/App.css'
-import Header from './components/NavBar.tsx'
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import './assets/css/App.css';
+import Header from './components/NavBar.tsx';
+import Loading from "./components/Loading.tsx";
+import Cursor from "./components/Cursor.tsx";
+import Home from "./components/home/Home.tsx";
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <Header />
-      <h1>Hello World !</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-    </>
-  )
+interface AppState {
+  isLoading: boolean;
 }
 
-// Ancienne palette de couleur (vert pastel)
+class App extends React.Component<{}, AppState> {
+  constructor(props: {}) {
+    super(props);
+    this.state = {
+      isLoading: true,
+    };
+  }
 
-// color bg : #E3E4D6
-// color text : #A6A77D
-// color trait : #A6A77F
-// color text bouton : #54544D
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ isLoading: false });
+    }, 2000);
+  }
 
-export default App
+  render() {
+    return (
+      <>
+        {this.state.isLoading ? (
+          <Loading />
+        ) : (
+          <Router>
+            <Cursor />
+            <Header />
+            <Routes>
+              <Route path="/" element={<Home />} />
+            </Routes>
+          </Router>
+        )}
+      </>
+    );
+  }
+}
+
+export default App;

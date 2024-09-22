@@ -1,19 +1,20 @@
+/* navBar.css */
+
 .navBar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #F5F5F5;
-    padding: 2vh;
-    margin: 3vh;
+    padding: 1.5rem;
+    margin: 1.5rem;
 }
 
-.btn, .divContainer{
+.btn, .divContainer {
     display: flex;
     align-items: center;
 }
 
 .logo > img {
-    height: 6vh;
+    height: 3rem;
 }
 
 .btnNav {
@@ -21,9 +22,9 @@
     border: solid 1px black;
     border-radius: 40px;
     color: #3F3F3F;
-    font-size: 2.5vh;
-    padding: 1vh 2vh;
-    margin: 0 2vh;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    margin: 0 1rem;
     transition: color 0.75s, background-color 0.75s;
 }
 
@@ -32,12 +33,12 @@
     border: solid 1px black;
     border-radius: 50%;
     color: #3F3F3F;
-    font-size: 2.5vh;
-    padding: 1.5vh;
-    margin: 0 2vh;
+    font-size: 1.25rem;
+    padding: 0.8rem;
+    margin: 0 1rem 0 2.5rem;
     transition: color 1s, background-color 1s;
-    width: 5vh; 
-    height: 5vh;
+    width: 3rem;
+    height: 3rem;
     display: flex; 
     align-items: center;
     justify-content: center;
@@ -47,13 +48,13 @@
     background-color: transparent;
     border: none;
     padding: 0;
-    margin: 0 2vh;
+    margin: 0 1rem;
 }
 
 .menuIcon {
     background-image: url('/src/assets/images/menu.png');
-    width: 6vh;
-    height: 6vh; 
+    width: 3rem;
+    height: 3rem;
     background-size: cover;
 }
 
@@ -63,6 +64,83 @@
 }
 
 .btnMenu img {
-    height: 5vh;
+    height: 3rem;
     width: auto;
+}
+
+/* Responsive adjustments */
+
+/* desktops */
+@media (max-width: 1200px) {
+    .btnNav {
+        font-size: 1.2rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .btnTranslate {
+        font-size: 1.2rem;
+        padding: 0.6rem;
+    }
+
+    .menuIcon {
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+}
+
+/* tablets in landscape */
+@media (max-width: 992px) {
+    .navBar {
+        padding: 1.2rem;
+        margin: 1.2rem;
+    }
+
+    .btnNav {
+        font-size: 1.2rem;
+        padding: 0.4rem 0.6rem;
+    }
+
+    .btnTranslate {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+
+    .menuIcon {
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+}
+
+/* tablets in portrait */
+@media (max-width: 768px) {
+    .navBar {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .btnNav, .btnTranslate {
+        display: none; 
+    }
+}
+
+/* smartphones */
+@media (max-width: 576px) {
+    .navBar {
+        padding: 0.8rem;
+        margin: 1rem;
+    }
+
+    .menuIcon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+/* small smartphones */
+@media (max-width: 400px) {
+    .navBar {
+        padding: 0.5rem;
+    }
 }

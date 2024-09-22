@@ -1,0 +1,100 @@
+.left-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    padding-left: 4rem;
+}
+
+.hello-world h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 3rem 0;
+}
+
+.leftHomeIntro, .leftHomeDesc {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.leftHomeIntro p, .leftHomeDesc p {
+    margin: 0;
+}
+
+/* Responsive adjustments */
+
+/* desktops */
+@media (max-width: 1200px) {
+    .hello-world h1 {
+        font-size: 4.5rem;
+    }
+
+    .leftHomeIntro, .leftHomeDesc {
+        font-size: 1.4rem;
+    }
+}
+
+/* tablets in landscape */
+@media (max-width: 992px) {
+    .left-home {
+        padding-left: 3rem;
+    }
+
+    .hello-world h1 {
+        font-size: 4rem;
+    }
+
+    .leftHomeIntro, .leftHomeDesc {
+        font-size: 1.3rem;
+    }
+}
+
+/* tablets in portrait */
+@media (max-width: 768px) {
+    .left-home {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .hello-world h1 {
+        font-size: 3.5rem;
+    }
+
+    .leftHomeIntro, .leftHomeDesc {
+        font-size: 1.2rem;
+    }
+}
+
+/* smartphones */
+@media (max-width: 576px) {
+    .left-home {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .hello-world h1 {
+        font-size: 2.5rem;
+    }
+
+    .leftHomeIntro, .leftHomeDesc {
+        font-size: 1.1rem;
+    }
+}
+
+/* small smartphones */
+@media (max-width: 400px) {
+    .left-home {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .hello-world h1 {
+        font-size: 2rem;
+    }
+
+    .leftHomeIntro, .leftHomeDesc {
+        font-size: 1rem;
+    }
+}

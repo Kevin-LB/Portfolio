@@ -1,0 +1,78 @@
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+}
+  
+.homeLeftContainer, .homeRightContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+/* home.css */
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+}
+
+.homeLeftContainer, .homeRightContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    transition: padding 0.3s;
+}
+
+/* Responsive adjustments */
+
+/* desktops */
+@media (max-width: 1200px) {
+    .homeLeftContainer, .homeRightContainer {
+        padding: 2.5rem;
+    }
+}
+
+/* tablets in landscape */
+@media (max-width: 992px) {
+    .home {
+        flex-direction: column;
+    }
+
+    .homeLeftContainer, .homeRightContainer {
+        padding: 2rem;
+        height: auto;
+    }
+}
+
+/* tablets in portrait */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+    }
+
+    .homeLeftContainer, .homeRightContainer {
+        padding: 1.5rem;
+    }
+}
+
+/* Esmartphones */
+@media (max-width: 576px) {
+    .homeLeftContainer, .homeRightContainer {
+        padding: 1rem;
+    }
+}
+
+/* small smartphones */
+@media (max-width: 400px) {
+    .homeLeftContainer, .homeRightContainer {
+        padding: 0.5rem;
+    }
+}
