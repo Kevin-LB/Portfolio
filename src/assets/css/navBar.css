@@ -1,0 +1,68 @@
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F5F5F5;
+    padding: 2vh;
+    margin: 3vh;
+}
+
+.btn, .divContainer{
+    display: flex;
+    align-items: center;
+}
+
+.logo > img {
+    height: 6vh;
+}
+
+.btnNav {
+    background-color: transparent;
+    border: solid 1px black;
+    border-radius: 40px;
+    color: #3F3F3F;
+    font-size: 2.5vh;
+    padding: 1vh 2vh;
+    margin: 0 2vh;
+    transition: color 0.75s, background-color 0.75s;
+}
+
+.btnTranslate {
+    background-color: transparent;
+    border: solid 1px black;
+    border-radius: 50%;
+    color: #3F3F3F;
+    font-size: 2.5vh;
+    padding: 1.5vh;
+    margin: 0 2vh;
+    transition: color 1s, background-color 1s;
+    width: 5vh; 
+    height: 5vh;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.btnMenu {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0 2vh;
+}
+
+.menuIcon {
+    background-image: url('/src/assets/images/menu.png');
+    width: 6vh;
+    height: 6vh; 
+    background-size: cover;
+}
+
+.btnNav:hover {
+    color: white;
+    background-color: #3F3F3F;
+}
+
+.btnMenu img {
+    height: 5vh;
+    width: auto;
+}
